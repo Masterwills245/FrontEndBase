@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row text-center mt-4">
+      <div class="col">
+        <img src="https://img.freepik.com/vector-premium/profesor-mostrando-icono-doodle-contorno-dibujado-mano-vector-infografia-profesor-antes-computadora-ilustracion-boceto-infografico-impresion-web-movil-e-infografia-aislado-sobre-fondo-blanco_107173-17716.jpg?w=740" alt=""
+          class="img-fluid" width="200px">
+      </div>
+    </div>
+    <div class="row text-center mt-5">
+      <div class="col">
+        <h2>CRUD Tutor</h2>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-2">
+        <label for="txtId" class="from-label">ID</label>
+        <input type="text" name="id" id="txtId" class="form-control" [(ngModel)]="tutor.id_Tutor">
+      </div>
+      <div class="col-md-2">
+        <label for="txtId" class="from-label">Cedula</label>
+        <input type="text" name="id" id="txtId" class="form-control" [(ngModel)]="tutor.cedula_Tutor">
+      </div>
+      <div class="col-md-4">
+        <label for="txtNombre" class="from-label">Nombre</label>
+        <input type="text" name="id" id="txtNombre" class="form-control" [(ngModel)]="tutor.nombres_Tutor">
+      </div>
+      <div class="col-md-4">
+        <label for="txtNombre" class="from-label">Apellido</label>
+        <input type="text" name="id" id="txtNombre" class="form-control" [(ngModel)]="tutor.apelidos_Tutor">
+      </div>
+      <div class="col-md-4">
+        <label for="txtNombre" class="from-label">Telefono</label>
+        <input type="text" name="id" id="txtNombre" class="form-control" [(ngModel)]="tutor.telefono_Tutor">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <button class="btn btn-success" type="button" (click)="onAddTutor(tutor)">Agregar</button>
+              
+        <button class="btn btn-primary m-2" type="button" (click)="clear()">Limpiar</button>
+      </div>
+      
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <table id="dtMascota" class="table table-striped" style="width: 100%;">
+          <thead>
+            <tr>
+              <th>Seleccionar</th>
+              <th>ID</th>
+              <th>Cedula</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Telefono</th>
+           
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of datatable">
+              <td><input type="button" value="Seleccionar" (click)="onSetData(item)"></td>
+              <td> {{ item.ID_Tutor }} </td>
+              <td> {{ item.Cedula_Tutor }} </td>
+              <td>{{ item.Nombres_Tutor}}</td>
+              <td>{{ item.Apelidos_Tutor}}</td>
+              <td>{{ item.Telefono_Tutor}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
